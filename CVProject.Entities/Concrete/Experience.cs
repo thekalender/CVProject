@@ -14,5 +14,6 @@ namespace CVProject.Entities.Concrete
         public string SubTitle { get; set; }
         public string Date { get; set; }
         //deneme2
+        //deneme3
     }
 }
