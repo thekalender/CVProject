@@ -11,6 +11,5 @@ namespace CVProject.Entities.Concrete
         [Key]
         public int AwardId { get; set; }
         public string AwardItem { get; set; }
-        //deneme
     }
 }
