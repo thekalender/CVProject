@@ -16,5 +16,6 @@ namespace CVProject.Entities.Concrete
         public short Phone { get; set; }
         public string Description { get; set; }
         public string SocialMedia { get; set; }
+        // Git Deneme
     }
 }
