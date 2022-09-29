@@ -17,5 +17,6 @@ namespace CVProject.Entities.Concrete
         public string Description { get; set; }
         public string SocialMedia { get; set; }
         // Git Deneme
+        // Git deneme2
     }
 }
