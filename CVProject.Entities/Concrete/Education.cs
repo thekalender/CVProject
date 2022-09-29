@@ -15,6 +15,6 @@ namespace CVProject.Entities.Concrete
         public string Decription { get; set; }
         public short GNOT { get; set; }
         public string Date { get; set; }
-        //deneme
+        
     }
 }
