@@ -16,5 +16,6 @@ namespace CVProject.Entities.Concrete
         public short GNOT { get; set; }
         public string Date { get; set; }
         //deneme
+        //brach
     }
 }
