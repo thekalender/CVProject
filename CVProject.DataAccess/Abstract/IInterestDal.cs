@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CVProject.DataAccess.Abstract
 {
-    public interface IAboutDal:IEntityRepository<About>
+    public interface IInterestDal : IEntityRepository<Interest>
     {
     }
 }

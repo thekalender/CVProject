@@ -1,10 +1,12 @@
-﻿using System;
+﻿using CVProject.Core.DataAccess;
+using CVProject.Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace CVProject.DataAccess.Abstract
 {
-    internal interface IEducationDal
+    internal interface IEducationDal : IEntityRepository<Education>
     {
     }
 }

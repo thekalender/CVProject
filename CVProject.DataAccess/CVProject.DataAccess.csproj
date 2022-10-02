@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CVProject.Core\CVProject.Core.csproj" />
+    <ProjectReference Include="..\CVProject.Entities\CVProject.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
