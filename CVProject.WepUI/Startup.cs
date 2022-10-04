@@ -1,3 +1,7 @@
+using CVProject.Business.Abstract;
+using CVProject.Business.Concrete;
+using CVProject.DataAccess.Abstract;
+using CVProject.DataAccess.Concrate.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +28,25 @@ namespace CVProject.WepUI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddSingleton<IAboutDal, EfAboutDal>();
+            services.AddSingleton<IAboutService, AboutManager>();
+
+            services.AddSingleton<IAwardDal, EfAwardDal>();
+            services.AddSingleton<IAwardService, AwardManager>();
+
+            services.AddSingleton<IEducationDal, EfEducationDal>();
+            services.AddSingleton<IEducationService, EducationManager>();
+
+            services.AddSingleton<IExperienceDal, EfExperienceDal>();
+            services.AddSingleton<IExperienceService, ExperienceManager>();
+
+            services.AddSingleton<IInterestDal, EfInterestDal>();
+            services.AddSingleton<IInterestService, InterestManager>();
+
+            services.AddSingleton<ISkillDal, EfSkillDal>();
+            services.AddSingleton<ISkillService, SkillManager>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +69,21 @@ namespace CVProject.WepUI
             app.UseRouting();
 
             app.UseAuthorization();
+
+            // KSoft_Ahk_start
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(name: "admin",
+                           pattern: "admin/{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(name: "Ahmet",
+                            pattern: "Ahmet/{*deger}",
+                            defaults: new { controller = "Home", action = "RazorDemo" });
+
+                endpoints.MapControllerRoute(name: "default",
+                            pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+            //KSoft_Ahk_end
 
             app.UseEndpoints(endpoints =>
             {
