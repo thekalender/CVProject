@@ -14,7 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Views\About\" />
   </ItemGroup>
 
 </Project>

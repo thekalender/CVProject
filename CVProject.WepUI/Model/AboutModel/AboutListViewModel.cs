@@ -1,7 +1,7 @@
 ﻿using CVProject.Entities.Concrete;
 using System.Collections.Generic;
 
-namespace CVProject.WepUI.Model.AboutModel
+namespace CVProject.WepUI
 {
     public class AboutListViewModel
     {

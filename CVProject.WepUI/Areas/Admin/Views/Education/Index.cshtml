@@ -1,0 +1,32 @@
+﻿@model CVProject.WepUI.Areas.Admin.Models.EducationListViewModel
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Başlık</th>
+            <th scope="col">Alt Başlık</th>
+            <th scope="col">Açıklama</th>
+            <th scope="col">GNOT</th>
+            <th scope="col">Tarih</th>
+            <th scope="col">Güncelle</th>
+            <th scope="col">Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+       @foreach (var item in Model.Educations)
+        {
+            <tr>
+                <th scope="row">@item.EducaitonId</th>
+                <td>@item.Title</td>
+                <td>@item.SubTitle</td>
+                <td>@item.Decription</td>
+                <td>@item.GNOT</td>
+                <td>@item.Date</td>
+                <td><a href="/Admin/Education/Update?id=@item.EducaitonId" class="btn btn-warning">Güncelle</a></td>
+                <td><a href="/Admin/Education/Delete?id=@item.EducaitonId" class="btn btn-danger">Sil</a></td>
+            </tr>
+        }    
+    </tbody>
+</table>
+<a href="/Admin/Education/Add" class="btn btn-info">Ekle</a>

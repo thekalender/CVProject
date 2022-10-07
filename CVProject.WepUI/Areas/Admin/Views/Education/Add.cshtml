@@ -1,0 +1,26 @@
+﻿@model CVProject.WepUI.Areas.Admin.Models.EducationAddViewModel
+
+
+<form asp-controller="Education" asp-action="Add" method="post">
+    <div class="form-group">
+        <label asp-for="Education.Title">Başlık</label>
+        <input asp-for="Education.Title" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Education.SubTitle">Alt Başlık</label>
+        <input asp-for="Education.SubTitle" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Education.Decription">Açıklama</label>
+        <input asp-for="Education.Decription" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="Education.GNOT">Ortama</label>
+        <input asp-for="Education.GNOT" class="form-control" />
+    </div>,<div class="form-group">
+        <label asp-for="Education.Date">Tarih</label>
+        <input asp-for="Education.Date" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary" href="/Admin/Education/Index">Ekle</button>
+</form>
+

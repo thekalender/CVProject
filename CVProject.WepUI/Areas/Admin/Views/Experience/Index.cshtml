@@ -1,0 +1,32 @@
+﻿@model CVProject.WepUI.Areas.Admin.Models.ExperienceListViewModel
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Başlık</th>
+            <th scope="col">Alt Başlık</th>
+            <th scope="col">Açıklama</th>
+            <th scope="col">Tarih</th>
+            <th scope="col">Güncelle</th>
+            <th scope="col">Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+            @foreach (var item in Model.Experiences)
+            {
+                <tr>
+                    <th scope="row">@item.ExperienceId</th>
+                    <td>@item.Title</td>
+                    <td>@item.SubTitle</td>
+                    <td>@item.Description</td>
+                    <td>@item.Date</td>
+                    <td><a href="/Admin/Experience/Update?id=@item.ExperienceId" class="btn btn-warning">Güncelle</a></td>
+                    <td><a href="/Admin/Experience/Delete?id=@item.ExperienceId" class="btn btn-danger">Sil</a></td>                  
+                </tr>
+            }             
+</table>
+<div class="form-group">
+    <a href="/Admin/Experience/Add"  class="btn btn-primary">Ekle </a>
+</div>

@@ -1,0 +1,27 @@
+﻿@model CVProject.WepUI.Areas.Admin.Models.ExperienceUpdateViewModel
+
+
+<form asp-controller="Experience" asp-action="Update" method="post">
+    <div class="form-group">
+        @Html.LabelFor(x=>x.Experience.ExperienceId)
+        @Html.TextBoxFor(x=>x.Experience.ExperienceId, new {@class = "form-control"})       
+    </div>
+    <div class="form-group">
+        <label asp-for="Experience.Title">Başlık</label>
+        <input asp-for="Experience.Title" class="form-control"/><br />
+    </div>
+    <div class="form-group">
+        <label asp-for="Experience.SubTitle">Alt Başlık</label>
+        <input asp-for="Experience.SubTitle" class="form-control"/>
+    </div>    
+      <div class="form-group">
+            <label asp-for="Experience.Description">Açıklama</label>
+            <textarea asp-for="Experience.Description"  class="form-control" rows="5" id="comment"></textarea>
+        </div>
+    <div class="form-group">
+        <label asp-for="Experience.Date">Tarih</label>
+        <input asp-for="Experience.Date" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-warning" href="/Admin/Experience/Update">Güncelle</button>
+    <a href="/Admin/Experience/Index" class="btn btn-info">Geri</a>
+</form>

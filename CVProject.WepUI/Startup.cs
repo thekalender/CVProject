@@ -73,22 +73,15 @@ namespace CVProject.WepUI
             // KSoft_Ahk_start
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(name: "admin",
-                           pattern: "admin/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "MyArea",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
-                endpoints.MapControllerRoute(name: "Ahmet",
-                            pattern: "Ahmet/{*deger}",
-                            defaults: new { controller = "Home", action = "RazorDemo" });
-
-                endpoints.MapControllerRoute(name: "default",
-                            pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "CVPProject",
+                    pattern: "{controller=CVPProject}/{action=Index}/{id?}");
             });
             //KSoft_Ahk_end
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapRazorPages();
-            });
         }
     }
 }

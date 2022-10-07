@@ -1,5 +1,4 @@
 ﻿using CVProject.Business.Abstract;
-using CVProject.WepUI.Model.AboutModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CVProject.WepUI.Controllers

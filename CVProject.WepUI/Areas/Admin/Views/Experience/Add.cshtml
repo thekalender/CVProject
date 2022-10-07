@@ -1,0 +1,25 @@
+﻿@model CVProject.WepUI.Areas.Admin.Models.ExperienceAddViewModel
+
+<form asp-controller="Experience" asp-action="Add" method="post">
+    <div class="form-group">
+        <label asp-for="Experience.Title">Başlık</label>
+        <input class="form-control" asp-for="Experience.Title" /><br />
+    </div>
+    <div class="form-group">
+        <label asp-for="Experience.SubTitle">Alt Başlık</label>
+        <input class="form-control" asp-for="Experience.SubTitle" /><br />
+    </div>
+    <div class="form-group">
+        <label asp-for="Experience.Description">Açıklama</label>
+        <input class="form-control" asp-for="Experience.Description" /><br />
+    </div>
+    <div class="form-group">
+        <label asp-for="Experience.Date">Tarih</label>
+        <input class="form-control" asp-for="Experience.Date" /><br />
+    </div>
+    <div class="form-group">
+        <a class="btn btn-primary" href="/Admin/Experince/Index">Ekle</a>
+        <a href="/Admin/Experience/Index" class="btn btn-info">Geri</a>
+    </div>
+</form>
+
